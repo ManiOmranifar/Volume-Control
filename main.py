@@ -31,7 +31,6 @@ vol = min_vol
 cap = cv2.VideoCapture(0)
 
 def draw_volume_bar(img, vol, vol_percent):
-    """نمایش میزان صدا به صورت نوار و عدد روی صفحه."""
     cv2.putText(img, f'Volume: {int(vol_percent)}%', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
     cv2.rectangle(img, (50, 100), (85, 400), (255, 0, 0), 3)
     vol_bar = int(np.interp(vol_percent, [0, 100], [400, 100]))
