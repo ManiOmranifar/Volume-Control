@@ -28,7 +28,6 @@ target_vol = None
 show_vol = 0  
 
 vol = min_vol
-
 cap = cv2.VideoCapture(0)
 
 def draw_volume_bar(img, vol, vol_percent):
